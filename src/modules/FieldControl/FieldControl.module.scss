@@ -1,0 +1,13 @@
+@import '../../styles/themes/colors';
+@import '../../styles/themes/fonts';
+
+.field {
+  border: none;
+  font-family: $primaryFont;
+  border-bottom: 1px solid $white;
+  color: $white;
+
+  &_error {
+    border-bottom: 1px solid $error;
+  }
+}

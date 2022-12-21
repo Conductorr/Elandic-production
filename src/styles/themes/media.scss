@@ -1,0 +1,58 @@
+@function calc-media-value($value) {
+  @if (
+    type-of($value) ==
+      'number' and
+      index('cm' 'mm' 'in' 'px' 'pt' 'pc', unit($value)) !=
+      null
+  ) {
+    $value: $value;
+  } @else {
+    $value: $value + px;
+  }
+
+  @return $value;
+}
+
+@mixin mediaWidth($num1, $num2) {
+  $min: 0;
+  $max: 0;
+
+  @if $num1 > $num2 {
+    $min: $num2;
+    $max: $num1;
+  } @else {
+    $min: $num1;
+    $max: $num2;
+  }
+
+  $min: calc-media-value($min);
+  $max: calc-media-value($max);
+
+  @media screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin mediaMaxWidth($max) {
+  $max: calc-media-value($max);
+
+  @media screen and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin mediaMinWidth($min) {
+  $min: calc-media-value($min);
+
+  @media screen and (min-width: $min) {
+    @content;
+  }
+}
+
+@mixin mediaMaxHeight($max) {
+  $max: calc-media-value($max);
+
+  @media screen and (max-height: $max) {
+    @content;
+  }
+}

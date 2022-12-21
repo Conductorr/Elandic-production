@@ -1,0 +1,10 @@
+{
+  "workWithUs:title": "Создадим идеальный проект",
+  "workWithUs:label": "Работай с нами",
+  "workWithUs:form.name.placeholder": "Ваше имя",
+  "workWithUs:form.phone.placeholder": "Ваш номер телефона",
+  "workWithUs:form.comment.placeholder": "Опишите ваш проект",
+  "workWithUs:form.privacy.text-part": "Я принимаю",
+  "workWithUs:form.privacy.link-part": "политику конфиденциальности",
+  "workWithUs:button": "Отправить"
+}

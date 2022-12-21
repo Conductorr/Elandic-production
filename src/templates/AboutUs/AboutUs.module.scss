@@ -1,0 +1,273 @@
+@import 'src/styles/themes/colors';
+@import 'src/styles/themes/fonts';
+@import 'src/styles/themes/media';
+
+.wrapper {
+  height: 100%;
+  color: $white;
+  margin-top: 15rem;
+}
+
+.header {
+  flex-direction: column;
+  margin-top: 100px;
+  padding: 0 40px;
+  width: 60%;
+
+  @include mediaMaxWidth(1337px) {
+    font: 700 80px/68px $secondaryFont;
+    width: 100%;
+  }
+
+  &__text {
+    text-transform: uppercase;
+    font: 700 120px/104px $secondaryFont;
+
+    &_upper {
+      float: left;
+
+      @include mediaMaxWidth(1337px) {
+        float: none;
+      }
+
+      @include mediaMaxWidth(670px) {
+        line-height: 0;
+      }
+
+      @include mediaMaxWidth(350px) {
+        width: 100%;
+      }
+    }
+
+    @include mediaMaxWidth(1337px) {
+      font: 700 80px/68px $secondaryFont;
+    }
+
+    @include mediaMaxWidth(670px) {
+      font: 700 60px/20px $secondaryFont;
+    }
+
+    @include mediaMaxWidth(420px) {
+      font: 700 50px/50px $secondaryFont;
+    }
+  }
+
+  &__icon {
+    margin: 0 46px 10px 0;
+    width: 68px;
+    height: 68px;
+
+    @include mediaMaxWidth(1337px) {
+      margin: 0 46px 10px 20px;
+      width: 36px;
+      height: 36px;
+    }
+
+    @include mediaMaxWidth(670px) {
+      margin: 0 46px 10px 20px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__video {
+    position: absolute;
+    top: 15.5rem;
+    width: 600px;
+    right: 40px;
+
+    @include mediaMaxWidth(1337px) {
+      position: initial;
+      width: 100%;
+    }
+
+    &__media {
+      object-fit: cover;
+      position: relative;
+      width: 100%;
+      height: 200px;
+
+      @include mediaMaxWidth(1337px) {
+        position: initial;
+        width: 100%;
+        height: 250px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__heading {
+    @include mediaMaxWidth(1337px) {
+      width: 600px;
+    }
+
+    @include mediaMaxWidth(670px) {
+      max-width: 350px;
+    }
+
+    @include mediaMaxWidth(420px) {
+      max-width: 100%;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 40px;
+    top: 37rem;
+
+    &__icon {
+      width: 2px;
+      height: 38px;
+
+      @include mediaMaxWidth(670px) {
+        order: 2;
+      }
+    }
+
+    &__heading {
+      text-transform: uppercase;
+      font: 600 14px/16px $primaryFont;
+      margin: 0 20px;
+      color: $white;
+      width: 72px;
+    }
+
+    @include mediaMaxWidth(670px) {
+      left: 20px;
+      top: 10rem;
+      order: 1;
+    }
+  }
+}
+
+.content {
+  margin-top: 80px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @include mediaMaxWidth(670px) {
+    margin-top: unset;
+  }
+}
+
+.article {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+
+  @include mediaMaxWidth(1337px) {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__text {
+    max-width: 860px;
+    width: 50%;
+
+    @include mediaMaxWidth(1337px) {
+      width: 100%;
+    }
+
+    &_bold {
+      font: 700 48px/56px $secondaryFont;
+      text-transform: uppercase;
+      width: 100%;
+
+      @include mediaMaxWidth(670px) {
+        font: 700 24px/32px $primaryFont;
+        text-transform: unset;
+      }
+    }
+
+    &_small {
+      width: 90%;
+      max-width: 500px;
+      font: 400 24px/32px $primaryFont;
+
+      @include mediaMaxWidth(1337px) {
+        width: 50%;
+        max-width: 50%;
+      }
+
+      @include mediaMaxWidth(1000px) {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__heading {
+    width: 60%;
+
+    @include mediaMaxWidth(1337px) {
+      width: 100%;
+    }
+
+    &_small {
+      width: 44%;
+
+      @include mediaMaxWidth(1337px) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    font: 400 24px/32px $secondaryFont;
+    column-gap: 16rem;
+
+    @include mediaMaxWidth(1337px) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include mediaMaxWidth(930px) {
+      column-gap: 50px;
+    }
+
+    @include mediaMaxWidth(670px) {
+      font: 400 16px/24px $secondaryFont;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      column-gap: 0;
+    }
+
+    &__text {
+      width: 100%;
+
+      @include mediaMaxWidth(1337px) {
+        width: 40%;
+      }
+
+      @include mediaMaxWidth(930px) {
+        width: 60%;
+      }
+
+      @include mediaMaxWidth(670px) {
+        width: 100%;
+      }
+
+      &_small {
+        width: 100%;
+
+        @include mediaMaxWidth(1337px) {
+          width: 40%;
+        }
+
+        @include mediaMaxWidth(930px) {
+          width: 50%;
+        }
+
+        @include mediaMaxWidth(670px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

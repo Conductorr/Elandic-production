@@ -1,0 +1,112 @@
+@import 'src/styles/themes/colors';
+@import 'src/styles/themes/fonts';
+@import 'src/styles/themes/media';
+
+.section {
+  color: $white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+
+  @include mediaMaxWidth(766px) {
+    width: 100%;
+  }
+}
+
+.wrapper {
+  position: relative;
+}
+
+.video {
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+
+  @include mediaMaxWidth(1000px) {
+    height: 85vh;
+  }
+
+  @include mediaMaxWidth(766px) {
+    height: 75vh;
+  }
+}
+
+.content {
+  padding: 40px;
+  width: 100vw;
+
+  &_upper {
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mediaMaxWidth(1000px) {
+      flex-direction: column-reverse;
+      align-items: start;
+      gap: 42px;
+    }
+
+    @include mediaMaxWidth(1000px) {
+      flex-direction: column-reverse;
+      align-items: start;
+    }
+  }
+}
+
+.links {
+  display: flex;
+  width: 10%;
+  position: absolute;
+  top: 60%;
+  bottom: 50%;
+  gap: 8px;
+  left: -10px;
+  transform: rotate(-90deg);
+
+  @include mediaMaxWidth(1000px) {
+    left: -5px;
+  }
+
+  @include mediaMaxWidth(766px) {
+    left: 25px;
+  }
+
+  &__item {
+    font: 500 24px/32px $secondaryFont;
+
+    @include mediaMaxWidth(766px) {
+      font-size: 18px;
+    }
+  }
+
+  &__separator {
+    height: 32px;
+    width: 8px;
+    fill: $white;
+  }
+}
+
+.title {
+  font: 700 120px/104px $secondaryFont;
+  text-transform: uppercase;
+
+  @include mediaMaxWidth(1000px) {
+    font: 700 80px/68px $secondaryFont;
+  }
+
+  @include mediaMaxWidth(766px) {
+    font: 700 40px/40px $secondaryFont;
+  }
+}
+
+.button {
+  max-height: 70px;
+}

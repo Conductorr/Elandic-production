@@ -1,0 +1,93 @@
+@import 'src/styles/themes/colors';
+@import 'src/styles/themes/fonts';
+@import 'src/styles/themes/media';
+
+.contacts {
+  height: 90vh;
+
+  @include mediaMaxWidth(1000px) {
+    height: 87vh;
+  }
+
+  @include mediaMaxWidth(766px) {
+    height: 75vh;
+  }
+
+  @include mediaMaxWidth(420px) {
+    height: 65vh;
+  }
+
+  &__container {
+    display: flex;
+    padding: 40px;
+    height: 100%;
+
+    &__content {
+      display: flex;
+      width: 100%;
+      height: 40%;
+      align-self: center;
+
+      &__links {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      &__heading {
+        font: 700 120px/104px $secondaryFont;
+        color: $white;
+        margin-bottom: 52px;
+        text-transform: uppercase;
+
+        @include mediaMaxWidth(1000px) {
+          font: 700 80px/68px $secondaryFont;
+        }
+
+        @include mediaMaxWidth(766px) {
+          font: 700 40px/40px $secondaryFont;
+          margin-bottom: 20px;
+        }
+      }
+
+      &__media {
+        gap: 0;
+        font: 700 48px/56px $secondaryFont;
+        text-decoration: none;
+        color: $white;
+        text-transform: uppercase;
+
+        @include mediaMaxWidth(1000px) {
+          font: 700 44px/52px $secondaryFont;
+        }
+
+        @include mediaMaxWidth(766px) {
+          font: 500 24px/32px $secondaryFont;
+        }
+      }
+
+      &__button {
+        position: absolute;
+        right: 40px;
+        height: 64px;
+        font: 300 30px/16px $secondaryFont;
+        color: $white;
+        text-transform: uppercase;
+
+        @include mediaMaxWidth(1000px) {
+          font: 300 18px/20px $secondaryFont;
+          width: 60%;
+          position: relative;
+          right: 0;
+          margin-top: 40px;
+        }
+
+        @include mediaMaxWidth(766px) {
+          font: 300 14px/16px $secondaryFont;
+          height: 40px;
+          width: 200px;
+        }
+      }
+    }
+  }
+}

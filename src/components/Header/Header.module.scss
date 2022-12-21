@@ -1,0 +1,52 @@
+@import 'src/styles/themes/colors';
+@import 'src/styles/themes/fonts';
+
+.header {
+  height: 100px;
+  display: flex;
+  width: 100%;
+  color: $white;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.logo {
+  fill: $black;
+
+  &__close {
+    fill: $white;
+  }
+
+  &_upper {
+    z-index: 30;
+    padding-left: 40px;
+  }
+
+  &__icon {
+    height: 52px;
+    fill: $white;
+    transition: fill 2000ms;
+
+    &_upper {
+      fill: $black;
+    }
+
+    &_menu {
+      color: $white;
+    }
+  }
+}
+
+.languages {
+  color: $white;
+  display: flex;
+  padding-right: 40px;
+}
+
+.separator {
+  margin: 0 8px;
+}

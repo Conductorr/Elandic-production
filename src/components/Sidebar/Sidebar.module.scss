@@ -1,0 +1,127 @@
+@import 'src/styles/themes/colors';
+@import 'src/styles/themes/fonts';
+@import 'src/styles/themes/media';
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -70vw;
+  height: 100vh;
+  width: 70vw;
+  background-color: $white;
+  transition-timing-function: ease-in;
+  transition: left 1000ms;
+  z-index: 99;
+  white-space: nowrap;
+
+  @include mediaMaxWidth(1050px) {
+    left: -100vw;
+    width: 100vw;
+  }
+
+  &_opened {
+    left: 0;
+  }
+
+  &__container {
+    height: 100vh;
+    padding: 40px 133px 40px 40px;
+
+    @include mediaMaxWidth(800px) {
+      margin: 0 auto;
+      padding: 40px 40px;
+    }
+  }
+
+  &__content {
+    height: 100%;
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+
+    @include mediaMaxWidth(800px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  &__links {
+    @include mediaMaxWidth(800px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__link {
+    font: 700 48px/56px $secondaryFont;
+
+    @include mediaMaxWidth(800px) {
+      font: 700 30px/36px $secondaryFont;
+    }
+  }
+
+  &__media {
+    display: flex;
+    flex-direction: column;
+
+    @include mediaMaxWidth(800px) {
+      gap: 4px;
+    }
+  }
+
+  &__button {
+    margin-bottom: 60px;
+
+    @include mediaMaxWidth(800px) {
+      margin-top: 40px;
+    }
+  }
+
+  &__heading {
+    font: 400 14px/16px $primaryFont;
+    color: $black;
+    text-decoration: none;
+    cursor: pointer;
+    gap: 4px;
+  }
+
+  &__footer {
+    margin-bottom: 40px;
+    bottom: 0;
+    position: absolute;
+
+    @include mediaMaxWidth(800px) {
+      left: -50%;
+      right: -50%;
+    }
+  }
+
+  &__logos {
+    display: flex;
+    flex-direction: column;
+
+    @include mediaMaxWidth(800px) {
+      align-items: center;
+    }
+  }
+
+  &__icon {
+    height: 29px;
+    width: 123px;
+  }
+
+  &__date {
+    font: 400 14px/16px $primaryFont;
+    display: flex;
+    left: 0;
+    margin-top: 6px;
+  }
+}

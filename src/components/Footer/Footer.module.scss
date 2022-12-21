@@ -1,0 +1,114 @@
+@import 'src/styles/themes/colors';
+@import 'src/styles/themes/fonts';
+@import 'src/styles/themes/media';
+
+.footer {
+  background-color: $black;
+  height: 108px;
+  width: 100%;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 35px 40px;
+    width: 100%;
+
+    @include mediaMaxWidth(1000px) {
+      flex-direction: column-reverse;
+    }
+
+    @include mediaMaxWidth(766px) {
+      flex-direction: column;
+    }
+
+    &__logos {
+      display: flex;
+      flex-direction: column;
+
+      @include mediaMaxWidth(766px) {
+        align-items: center;
+      }
+
+      &__icon {
+        display: flex;
+        left: 0;
+        fill: $white;
+        height: 29px;
+        width: 123px;
+      }
+
+      &__heading {
+        font: 400 14px/16px $primaryFont;
+        white-space: nowrap;
+        display: flex;
+        left: 0;
+        margin-top: 6px;
+        color: $white;
+      }
+    }
+
+    &__media {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+
+      @include mediaMaxWidth(766px) {
+        flex-direction: row-reverse;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding: 40px 0 80px 0;
+
+        &_ru {
+          flex-direction: column-reverse;
+        }
+      }
+
+      &__privacy {
+        font: 400 14px/16px $primaryFont;
+      }
+
+      &__separator {
+        height: 32px;
+        width: 8px;
+        fill: $white;
+
+        @include mediaMaxWidth(766px) {
+          display: none;
+        }
+      }
+
+      &__main {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+
+        @include mediaMaxWidth(766px) {
+          position: absolute;
+          margin-top: 160px;
+          display: block;
+        }
+
+        &__links {
+          font: 400 14px/16px $primaryFont;
+          color: $white;
+          text-transform: uppercase;
+          text-decoration: none;
+        }
+
+        &__bottom {
+          display: flex;
+          align-items: center;
+          gap: 28px;
+
+          @include mediaMaxWidth(768px) {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+  }
+}

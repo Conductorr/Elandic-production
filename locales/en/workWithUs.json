@@ -1,0 +1,10 @@
+{
+  "workWithUs:title": "Let's create your project",
+  "workWithUs:label": "Work with us",
+  "workWithUs:form.name.placeholder": "Your name",
+  "workWithUs:form.phone.placeholder": "Your phone",
+  "workWithUs:form.comment.placeholder": "Your request",
+  "workWithUs:form.privacy.text-part": "I accept the",
+  "workWithUs:form.privacy.link-part": "privat policy",
+  "workWithUs:button": "Send"
+}

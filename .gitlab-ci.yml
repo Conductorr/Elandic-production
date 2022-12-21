@@ -1,0 +1,26 @@
+stages:
+  - build
+  - deploy
+
+build-job:
+  image: node:16.15.1
+  stage: build
+  only:
+    - master
+    - matvej-first-page
+  script:
+    - npm i
+    - npm run build
+  artifacts:
+    paths:
+      - public
+
+deploy-job:
+  image: node:fermium-slim
+  stage: deploy
+  only:
+    - master
+    - matvej-first-page
+  script:
+    - npm install netlify-cli --save-dev
+    - ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_TOKEN --prod --dir=public

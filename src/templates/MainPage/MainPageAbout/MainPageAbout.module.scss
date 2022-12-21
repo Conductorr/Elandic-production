@@ -1,0 +1,146 @@
+@import 'src/styles/themes/colors';
+@import 'src/styles/themes/fonts';
+@import 'src/styles/themes/media';
+
+.about {
+  padding: 262px 40px 32px 40px;
+  display: flex;
+  align-items: end;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @include mediaMaxWidth(600px) {
+    padding-top: 60px;
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    padding-bottom: 40px;
+    border-bottom: 4px solid white;
+
+    @include mediaMaxWidth(900px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__inner {
+      display: flex;
+      vertical-align: top;
+      padding-right: 84px;
+
+      @include mediaMaxWidth(768px) {
+        padding: 0;
+      }
+
+      &__quotesIcon {
+        position: absolute;
+        fill: $white;
+        height: 32px;
+        top: 0;
+        left: 0;
+      }
+
+      &__heading {
+        font: 600 14px/16px $primaryFont;
+        padding-top: 8px;
+        margin-left: 60px;
+        line-height: 16px;
+        color: $white;
+        margin-right: 20px;
+        width: 72px;
+      }
+
+      &__verticalIcon {
+        display: flex;
+        align-items: center;
+        height: 38px;
+        width: 2px;
+        fill: $white;
+        margin-right: 50px;
+      }
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: row;
+
+    @include mediaMaxWidth(1400px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include mediaMaxWidth(768px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__caption {
+      font: 700 120px/104px $secondaryFont;
+      word-wrap: break-word;
+      text-transform: uppercase;
+      color: $white;
+      width: 90%;
+      display: flex;
+
+      @include mediaMaxWidth(1920px) {
+        width: 90%;
+      }
+
+      @include mediaMaxWidth(820px) {
+        width: 100%;
+        margin-bottom: 30px;
+        font: 700 120px/104px $secondaryFont;
+      }
+
+      @include mediaMaxWidth(768px) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      @include mediaMaxWidth(600px) {
+        margin: 20px 0 20px 0;
+        font: 700 40px/40px $secondaryFont;
+        width: 100%;
+      }
+    }
+
+    &__footer {
+      margin-left: 20px;
+      display: inline-block;
+
+      @include mediaMaxWidth(1400px) {
+        margin-left: 0;
+      }
+
+      @include mediaMaxWidth(768px) {
+        margin-left: 0;
+      }
+
+      &__description {
+        font: 400 24px/32px $primaryFont;
+        vertical-align: top;
+        display: inline-block;
+        width: 30%;
+        color: $white;
+
+        @include mediaMaxWidth(1920px) {
+          width: 60%;
+        }
+
+        @include mediaMaxWidth(600px) {
+          width: 100%;
+          font: 400 16px/24px $primaryFont;
+        }
+      }
+
+      &__button {
+        width: 170px;
+        horiz-align: left;
+        margin-top: 80px;
+      }
+    }
+  }
+}

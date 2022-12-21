@@ -1,0 +1,53 @@
+@import 'src/styles/themes/colors';
+@import 'src/styles/themes/fonts';
+@import 'src/styles/themes/media';
+
+.work {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+
+  &:hover {
+    .work_hidden {
+      display: flex;
+    }
+  }
+
+  &__video {
+    cursor: pointer;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &_hidden {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+
+    @include mediaMaxWidth(1400) {
+      display: flex;
+      background-color: transparent;
+    }
+  }
+
+  &__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25% auto;
+    color: $white;
+    font: 400 24px/32px $primaryFont;
+
+    @include mediaMaxWidth(1400px) {
+      align-items: end;
+      justify-content: left;
+      margin: 0;
+      padding: 0 0 8px 8px;
+      font: 400 16px/24px $primaryFont;
+    }
+  }
+}

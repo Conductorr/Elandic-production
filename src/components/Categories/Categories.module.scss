@@ -1,0 +1,73 @@
+@import 'src/styles/themes/colors';
+@import 'src/styles/themes/fonts';
+@import 'src/styles/themes/media';
+
+.categories {
+  position: fixed;
+  top: 0;
+  right: -30vw;
+  height: 100vh;
+  width: 30vw;
+  background-color: $black;
+  transition-timing-function: ease-in;
+  transition: right 1000ms;
+  z-index: 100;
+  white-space: nowrap;
+
+  @include mediaMaxWidth(1050px) {
+    right: -100vw;
+    width: 100vw;
+  }
+
+  &_opened {
+    right: 0;
+  }
+
+  &__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 40px 40px;
+
+    @include mediaMaxWidth(600px) {
+      flex-direction: column-reverse;
+      justify-content: center;
+      padding: 32px 32px;
+    }
+
+    &__list {
+      gap: 4px;
+
+      @include mediaMaxWidth(600px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    &__link {
+      font: 400 14px/16px $primaryFont;
+      text-transform: uppercase;
+    }
+
+    &__button {
+      transform: rotate(-90deg);
+      padding-top: 60px;
+
+      @include mediaMaxWidth(600px) {
+        top: 0;
+        position: absolute;
+        transform: rotate(0);
+      }
+
+      &__close {
+        text-transform: uppercase;
+        cursor: pointer;
+        font: 500 24px/32px $secondaryFont;
+      }
+    }
+  }
+}

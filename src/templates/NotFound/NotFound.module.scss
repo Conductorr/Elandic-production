@@ -1,0 +1,82 @@
+@import 'src/styles/themes/colors';
+@import 'src/styles/themes/fonts';
+@import 'src/styles/themes/media';
+
+.page {
+  height: 100vh;
+  display: flex;
+}
+
+.text {
+  color: $white;
+  font: 700 123px $secondaryFont;
+  text-transform: uppercase;
+
+  @include mediaMaxWidth(833) {
+    font-size: 80px;
+  }
+
+  @include mediaMaxWidth(631) {
+    font-size: 50px;
+  }
+}
+
+.subText {
+  position: absolute;
+  right: 0;
+  bottom: 48px;
+  font-size: 24px;
+  color: $white;
+
+  @include mediaMaxWidth(833) {
+    bottom: 28px;
+  }
+
+  @include mediaMaxWidth(631) {
+    position: relative;
+    bottom: 0;
+  }
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  padding: 40px;
+  justify-content: space-between;
+  align-self: end;
+
+  &__text {
+    position: relative;
+    max-width: 574px;
+  }
+
+  @include mediaMaxWidth(833) {
+    align-self: center;
+
+    &__text {
+      max-width: 375px;
+    }
+  }
+
+  @include mediaMaxWidth(631) {
+    flex-direction: column;
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+    }
+  }
+}
+
+.button {
+  margin-top: 48px;
+
+  @include mediaMaxWidth(833) {
+    margin-top: 35px;
+
+    &__item {
+      width: 100%;
+    }
+  }
+}

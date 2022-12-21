@@ -1,0 +1,26 @@
+@import 'src/styles/themes/colors';
+
+.label {
+  align-items: center;
+
+  &_white {
+    color: $white;
+  }
+
+  &_black {
+    color: $black;
+  }
+}
+
+.icon {
+  width: 16px;
+  height: 26px;
+
+  &_white {
+    fill: $white;
+  }
+
+  &_black {
+    fill: $black;
+  }
+}

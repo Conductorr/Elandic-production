@@ -1,0 +1,90 @@
+@import 'src/styles/themes/colors';
+@import 'src/styles/themes/fonts';
+@import 'src/styles/themes/media';
+
+.main {
+  width: 100%;
+
+  &__video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+  &__container {
+    height: 100vh;
+    padding: 32px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__list {
+      &__bound {
+        font: 400 24px/32px $secondaryFont;
+      }
+    }
+
+    &__button {
+      transform: rotate(-90deg);
+      padding-bottom: 0;
+      padding-top: 120px;
+
+      &__text {
+        text-transform: uppercase;
+        cursor: pointer;
+        font: 500 24px/32px $secondaryFont !important;
+      }
+    }
+  }
+
+  &__footer {
+    position: relative;
+
+    &__logo {
+      position: absolute;
+      height: 70px;
+      fill: $white;
+      top: -86px;
+      left: 40px;
+    }
+
+    &__star {
+      position: absolute;
+      fill: $white;
+      width: 73px;
+      height: 73px;
+      top: -92px;
+      right: 36px;
+      -webkit-animation: spin 4s linear infinite;
+      -moz-animation: spin 4s linear infinite;
+      animation: spin 4s linear infinite;
+
+      @include mediaMaxWidth(470px) {
+        display: none;
+      }
+    }
+  }
+}
+
+@-webkit-keyframes spin {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@-moz-keyframes spin {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(-360deg);
+  }
+}

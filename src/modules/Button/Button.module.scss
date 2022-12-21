@@ -1,0 +1,152 @@
+@import 'styles/themes/fonts';
+@import 'styles/themes/colors';
+
+@mixin theme-idle($color) {
+  color: $color;
+  background-color: transparent;
+  border: 1px solid $color;
+
+  &_disabled,
+  &_disabled:hover {
+    border: 1px solid rgba($color, 0.5);
+    color: rgba($color, 0.5);
+    cursor: default;
+
+    .icon {
+      fill: rgba($color, 0.5);
+    }
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-width: 1px;
+  border-style: solid;
+  outline: none;
+  background-color: transparent;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  box-sizing: border-box;
+  border-radius: 100px;
+  text-transform: uppercase;
+
+  &_l {
+    font-family: $secondaryFont;
+    font-size: 30px;
+    font-weight: 300;
+    padding: 20px 24px;
+  }
+
+  &_white {
+    @include theme-idle($white);
+
+    &_m {
+      font-family: $primaryFont;
+      font-size: 14px;
+      font-weight: 400;
+      height: 40px;
+      padding: 10px 16px;
+
+      &:hover {
+        color: $black;
+        background-color: $white;
+
+        .icon {
+          fill: $black;
+        }
+      }
+    }
+
+    &_l {
+      font-family: $secondaryFont;
+      font-size: 30px;
+      font-weight: 300;
+      padding: 20px 24px;
+    }
+
+    &_outlined {
+      border: none;
+
+      &:hover {
+        background-color: transparent;
+        color: $white;
+      }
+    }
+  }
+
+  &_black {
+    @include theme-idle($black);
+
+    &_m {
+      font-family: $primaryFont;
+      font-size: 14px;
+      font-weight: 400;
+      padding: 10px 16px;
+
+      &:hover {
+        color: $white;
+        background-color: $black;
+
+        .icon {
+          fill: $white;
+        }
+      }
+    }
+
+    &_l {
+      font-family: $secondaryFont;
+      font-size: 30px;
+      font-weight: 300;
+      padding: 20px 24px;
+    }
+
+    &_outlined {
+      border: none;
+
+      &:hover {
+        background-color: transparent;
+        color: $black;
+      }
+    }
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  &_l {
+    width: 34px;
+    height: 34px;
+    margin-left: 20px;
+
+    &_white {
+      fill: $white;
+    }
+
+    &_black {
+      fill: $black;
+    }
+  }
+
+  &_m {
+    width: 21px;
+    height: 21px;
+    margin-left: 16px;
+
+    &_white {
+      fill: $white;
+    }
+
+    &_black {
+      fill: $black;
+    }
+  }
+}

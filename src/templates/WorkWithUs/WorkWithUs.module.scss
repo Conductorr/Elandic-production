@@ -1,0 +1,121 @@
+@import 'src/styles/themes/colors';
+@import 'src/styles/themes/fonts';
+@import 'src/styles/themes/media';
+
+.wrapper {
+  color: $white;
+  display: flex;
+  height: 85vh;
+
+  @include mediaMaxWidth(1000px) {
+    height: 82vh;
+  }
+
+  @include mediaMaxWidth(766px) {
+    height: 69vh;
+  }
+}
+
+.content {
+  align-self: end;
+  padding: 40px;
+
+  @include mediaMaxWidth(1000px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  width: 87%;
+  margin-bottom: 52px;
+
+  @include mediaMaxWidth(1000px) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  @include mediaMaxWidth(766px) {
+    margin-bottom: 0;
+  }
+
+  &__text {
+    margin-left: 160px;
+    font: 700 102px/104px $secondaryFont;
+
+    @include mediaMaxWidth(1000px) {
+      margin-left: 0;
+      font: 700 80px/68px $secondaryFont;
+      width: 70%;
+      margin-bottom: 69px;
+      margin-top: 32px;
+    }
+
+    @include mediaMaxWidth(766px) {
+      font: 700 40px/40px $secondaryFont;
+      width: 10%;
+    }
+  }
+
+  &__label {
+    font: 600 14px $primaryFont;
+  }
+}
+
+.form {
+  display: flex;
+  gap: 32px;
+
+  @include mediaMaxWidth(1000px) {
+    flex-direction: column;
+  }
+
+  &__button {
+    flex-grow: 1;
+  }
+
+  &__fields {
+    justify-content: space-between;
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include mediaMaxWidth(1000px) {
+      gap: 32px;
+    }
+
+    &__upper {
+      display: flex;
+      gap: 32px;
+
+      @include mediaMaxWidth(766px) {
+        flex-direction: column;
+      }
+    }
+
+    &__bottom {
+      display: flex;
+    }
+  }
+}
+
+.field {
+  width: 100%;
+}
+
+.button {
+  width: 100%;
+}
+
+.heading {
+  padding-top: 20px;
+  display: flex;
+  position: absolute;
+
+  @include mediaMaxWidth(1000px) {
+    padding-top: 0;
+  }
+}

@@ -1,0 +1,92 @@
+@import 'src/styles/themes/colors';
+@import 'src/styles/themes/fonts';
+@import 'src/styles/themes/media';
+
+.ending {
+  height: 100%;
+  position: relative;
+
+  &__emptyContainer {
+    background-color: $white;
+    width: 100%;
+    height: 155px;
+    margin: -1px;
+  }
+
+  &__container {
+    height: 80%;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    @include mediaMaxWidth(830px) {
+      top: 60px;
+    }
+
+    @include mediaMaxWidth(700px) {
+      top: 100px;
+    }
+
+    &__heading {
+      font: 500 84px/94px $secondaryFont;
+      text-transform: uppercase;
+
+      @include mediaMaxWidth(2560px) {
+        width: 30%;
+      }
+
+      @include mediaMaxWidth(1920px) {
+        width: 40%;
+      }
+
+      @include mediaMaxWidth(1500px) {
+        width: 70%;
+      }
+
+      @include mediaMaxWidth(1200px) {
+        width: 90%;
+      }
+
+      @include mediaMaxWidth(700px) {
+        width: 60%;
+        font: 500 32px/36px $secondaryFont;
+      }
+    }
+
+    &__navigation {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      padding-left: 30px;
+
+      @include mediaMaxWidth(500px) {
+        padding-left: 10px;
+      }
+
+      &__icon {
+        width: 64px;
+        height: 64px;
+      }
+
+      &__text {
+        font: 500 24px/32px $secondaryFont;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__background {
+    width: 100%;
+
+    &__image {
+      object-fit: cover;
+      height: 400px;
+      width: 100%;
+    }
+  }
+}

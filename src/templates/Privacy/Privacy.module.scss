@@ -1,0 +1,67 @@
+@import 'src/styles/themes/colors';
+@import 'src/styles/themes/fonts';
+@import 'src/styles/themes/media';
+
+.privacy {
+  height: 100%;
+  width: 100%;
+  padding-left: 40px;
+
+  @include mediaMaxWidth(1337px) {
+    padding: 0 40px;
+  }
+
+  @include mediaMaxWidth(500px) {
+    margin: 0 auto;
+  }
+
+  &__heading {
+    font: 700 120px/104px $secondaryFont;
+    color: $white;
+    margin: 120px 0 20px 0;
+    width: 100%;
+
+    @include mediaMaxWidth(1337px) {
+      font: 700 80px/68px $secondaryFont;
+    }
+
+    @include mediaMaxWidth(768px) {
+      font: 700 40px/40px $secondaryFont;
+    }
+  }
+
+  &__content {
+    max-width: 780px;
+
+    @include mediaMaxWidth(1337px) {
+      width: 100%;
+      max-width: unset;
+    }
+
+    &__text {
+      &_small {
+        font: 400 16px/24px $primaryFont;
+        color: $white;
+        margin-top: 20px;
+      }
+
+      &_bold {
+        font: 700 48px/56px $secondaryFont;
+        color: $white;
+        text-transform: uppercase;
+        margin-top: 40px;
+
+        @include mediaMaxWidth(1337px) {
+          font: 700 24px/32px $secondaryFont;
+        }
+      }
+
+      &_middle {
+        font: 700 24px/32px $primaryFont;
+        color: $white;
+        text-transform: uppercase;
+        margin-top: 40px;
+      }
+    }
+  }
+}

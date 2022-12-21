@@ -1,0 +1,62 @@
+@import 'src/styles/themes/colors';
+
+.link {
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.theme {
+  &_black {
+    color: $black;
+
+    .icon {
+      fill: $black;
+    }
+  }
+
+  &_white {
+    color: $white;
+
+    .icon {
+      fill: $white;
+    }
+  }
+
+  &_underlined {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &_void {
+    &:hover {
+      color: $white;
+      -webkit-text-stroke: 1px;
+      -webkit-text-stroke-color: $black;
+      transition: 0.1s ease;
+    }
+  }
+
+  &_uppercase {
+    text-transform: uppercase;
+  }
+
+  &_disabled {
+    opacity: 0.5;
+    cursor: default;
+    text-decoration: none !important;
+  }
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+
+  &_left {
+    transform: rotate(180deg);
+  }
+}

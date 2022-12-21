@@ -1,0 +1,21 @@
+@import '../../styles/themes/colors';
+
+.textField {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: inherit;
+  width: 100%;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+
+  &:focus {
+    border: none;
+  }
+
+  &::placeholder {
+    color: rgba($white, 0.6);
+    text-transform: uppercase;
+  }
+}
